@@ -1,0 +1,83 @@
+<div class="section-head">
+  <span class="section-num">01 /</span>
+  <h2 class="section-title">Objective Master Clock</h2>
+  <p class="section-desc">Every timer verified for Patch 26.7 / Season 2026 S1.</p>
+</div>
+
+<div class="callout co-red"><strong>Season 2026 Changed Everything.</strong> Baron at 20:00 (was 25:00). Atakhan removed. Minions at 0:30 (was 1:05). Feats of Strength gone. Faelights added. Your old timing instincts are wrong — start fresh.</div>
+
+<div class="lbl">Epic Objectives</div>
+<div class="table-wrap">
+  <table class="data-table">
+    <thead><tr><th>Objective</th><th>First Spawn</th><th>Respawn Timer</th><th>Special</th><th>Setup By</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Dragon</strong></td><td class="td-gold">5:00</td><td class="td-dim">+6:00 after death</td><td class="td-dim">4th drake triggers Elder Dragon</td><td class="td-gold">3:30</td></tr>
+      <tr><td><strong>Elder Dragon</strong></td><td class="td-dim">After drake 4</td><td class="td-dim">+6:00 after death</td><td class="td-dim">Execute ability + all drake buffs</td><td class="td-dim">T − 1:30</td></tr>
+      <tr><td><strong>Void Grubs Wave 1</strong></td><td class="td-gold">6:00</td><td class="td-dim">Wave 2 @ 10:00</td><td class="td-dim">Killed before 9:45 triggers Wave 2</td><td class="td-gold">4:30</td></tr>
+      <tr><td><strong>Rift Herald</strong></td><td class="td-gold">6:00</td><td class="td-dim">No respawn</td><td class="td-dim">Despawns ~19:45 if untouched</td><td class="td-gold">4:30</td></tr>
+      <tr class="td-hl"><td><strong>⚠ Baron Nashor — 5 min earlier in 2026</strong></td><td class="td-gold" style="color:var(--gl);font-weight:700">20:00</td><td class="td-gold" style="color:var(--gl)">+6–7 min</td><td style="color:var(--gl);font-size:12px">Was 25:00. 650 global XP new reward.</td><td class="td-gold" style="color:var(--gl)">18:30</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="g2" style="margin-top:12px">
+  <div class="card">
+    <div class="card-title">Jungle Camps</div>
+    <div class="trow"><span class="trow-name">Red / Blue Buff</span><span class="trow-val">5:00</span><span class="trow-sub">+5:00 respawn</span></div>
+    <div class="trow"><span class="trow-name">Small Camps</span><span class="trow-val">1:30</span><span class="trow-sub">+2:15 respawn</span></div>
+    <div class="trow"><span class="trow-name">Scuttle Crab</span><span class="trow-val">3:30</span><span class="trow-sub">+2:30 respawn</span></div>
+    <div class="trow"><span class="trow-name">Buff Invade Windows</span><span class="trow-val">6:30 / 11:30 / 16:30</span></div>
+    <div class="trow highlight"><span class="trow-name">Minions Spawn (2026 new)</span><span class="trow-val">0:30</span><span class="trow-sub">was 1:05</span></div>
+  </div>
+  <div class="card">
+    <div class="card-title gold">Death Timer Reference</div>
+    <div class="trow"><span class="trow-name">Level 6</span><span class="trow-val" style="color:var(--gr)">12s</span></div>
+    <div class="trow"><span class="trow-name">Level 8</span><span class="trow-val">20s</span></div>
+    <div class="trow"><span class="trow-name">Level 9</span><span class="trow-val">25s</span></div>
+    <div class="trow"><span class="trow-name">Level 11</span><span class="trow-val">32s</span></div>
+    <div class="trow"><span class="trow-name">Level 13</span><span class="trow-val" style="color:var(--r)">~40s</span></div>
+    <div class="trow"><span class="trow-name">Level 16</span><span class="trow-val" style="color:var(--r)">~50s</span></div>
+    <div class="trow"><span class="trow-name">Level 18</span><span class="trow-val" style="color:var(--r)">~55s</span></div>
+  </div>
+</div>
+
+<div class="lbl">Summoner Spells</div>
+<div class="card">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0">
+    <div class="trow"><span class="trow-name">Flash</span><span class="trow-val">5:00 CD</span><span class="trow-sub">highest priority</span></div>
+    <div class="trow"><span class="trow-name">Teleport to Tower</span><span class="trow-val">4:00 CD</span></div>
+    <div class="trow"><span class="trow-name">Teleport Non-tower</span><span class="trow-val">5:00 CD</span></div>
+    <div class="trow"><span class="trow-name">Teleport Cancelled</span><span class="trow-val">3:20 CD</span></div>
+    <div class="trow"><span class="trow-name">Ghost / Ignite / Exhaust</span><span class="trow-val">3:30 CD</span></div>
+    <div class="trow"><span class="trow-name">Smite</span><span class="trow-val">~15s CD</span><span class="trow-sub">track for Baron</span></div>
+  </div>
+</div>
+
+<div class="lbl">Interactive Calculators</div>
+<div class="g2">
+  <div id="calc-respawn" class="calc-card">
+    <div class="calc-title">Respawn Calculator</div>
+    <div class="calc-row">
+      <label>Objective died at</label>
+      <input type="number" data-calc="min" value="21" min="0" max="55"> :
+      <input type="number" data-calc="sec" value="30" min="0" max="59">
+      <select data-calc="type">
+        <option value="6">Dragon +6</option>
+        <option value="7">Baron +7</option>
+        <option value="5">Buff +5</option>
+      </select>
+    </div>
+    <div class="calc-result" data-calc="output">Respawns: 27:30 | Setup by: 26:00</div>
+    <p class="calc-hint">Start warding and stacking at the "Setup by" time above.</p>
+  </div>
+  <div id="calc-death" class="calc-card">
+    <div class="calc-title">Death Window Calculator</div>
+    <div class="calc-row">
+      <label>Enemy level</label>
+      <input type="range" data-calc="level" min="1" max="18" value="12" step="1">
+      <span class="range-val" data-calc="level-out">12</span>
+    </div>
+    <div class="calc-result" data-calc="output">Dead ~39s | Use for: Dragon + plates</div>
+    <p class="calc-hint">Level 13+ deaths give Baron-attempt windows. Never waste a 40s timer.</p>
+  </div>
+</div>

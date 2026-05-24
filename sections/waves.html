@@ -1,0 +1,77 @@
+<div class="section-head">
+  <span class="section-num">02 /</span>
+  <h2 class="section-title">Wave Management Math</h2>
+  <p class="section-desc">The most controllable macro lever. Master waves and tempo follows.</p>
+</div>
+<div class="callout co-gold"><strong>Waves are the game's clock.</strong> Every wave = ~177g and ~500 XP. Missing 3 waves early = half a level deficit. Wave state determines whether you have tempo — and tempo determines who wins every objective fight.</div>
+
+<div class="lbl">The Four Wave States</div>
+<div class="wave-grid">
+  <div class="wave-card freeze">
+    <div class="wave-name">Freeze</div>
+    <div class="wave-desc">3-5 more enemy minions near your tower. Enemy must walk into danger to farm. You are safe. They bleed gold and XP every second.</div>
+    <div class="wave-use">WHEN: Won lane, their jungler nearby, protecting a lead before an objective.<br>HOW: Kill only enough to maintain the ratio. Never over-kill. Cannon waves break freezes — kill cannon early.</div>
+  </div>
+  <div class="wave-card slow">
+    <div class="wave-name">Slow Push</div>
+    <div class="wave-desc">Kill casters first. Let melee minions stack. Wave grows large automatically, creating a crashing window for roams or objectives.</div>
+    <div class="wave-use">WHEN: Before an objective spawn, before a roam, or to force a crash timing window.<br>HOW: Kill casters early each cycle. Last-hit only. Wave inflates over 30-60 seconds.</div>
+  </div>
+  <div class="wave-card crash">
+    <div class="wave-name">Crash</div>
+    <div class="wave-desc">Full-clear everything into their tower. Tower kills their minions. Enemy loses CS if absent. You gain free tempo anywhere on the map.</div>
+    <div class="wave-use">WHEN: 30-40s before objective, before recalling, after kills, before roaming, to deny TP value.<br>HOW: Hard clear every minion. Push to tower. Leave as it crashes. Tempo window is yours.</div>
+  </div>
+  <div class="wave-card bounce">
+    <div class="wave-name">Bounce</div>
+    <div class="wave-desc">After a crash, enemy wave rebuilds and pushes toward you naturally. Safe setup for a freeze or farm window on return.</div>
+    <div class="wave-use">WHEN: Automatically happens after any crash. Use the window (recall, ward, roam).<br>HOW: Nothing — the wave handles itself. Return in time to collect the incoming wave.</div>
+  </div>
+</div>
+
+<div class="lbl">Wave Gold and XP Math</div>
+<div class="g2">
+  <div class="formula">
+    <span class="formula-label">Normal Wave Gold Value</span>
+    6 melee @ ~21g = 126g<br>3 casters @ ~17g = 51g<br>
+    <span class="result">Total: ~177g per wave | Cannon wave: ~237g</span><br>
+    <span class="note">Missing 3 waves silently loses ~531g — more than a Blasting Wand</span>
+  </div>
+  <div class="formula">
+    <span class="formula-label">XP Per Wave (early game)</span>
+    Full wave: ~500 XP<br>3 missed waves: ~1,500 XP lost<br>
+    <span class="result">Level 4-6: 3 missed waves ≈ half a level behind</span>
+  </div>
+</div>
+<div class="formula red">
+  <span class="formula-label">Crash Timing Formula</span>
+  Objective spawns at time T. Start crashing by: T − 40 seconds. Arrive: T − 10 to 15 seconds.<br>
+  <span class="warn">Still farming at T−20: drop the wave. Leave now. You are already late.</span>
+</div>
+<div class="formula green">
+  <span class="formula-label">Freeze Ratio Formula</span>
+  Enemy minions near your tower must outnumber yours by 3 to 5.<br>
+  <span class="result">Kill only what maintains that ratio. Never auto-attack if it tips the wave toward their tower.</span><br>
+  <span class="note">Cannon waves naturally break freezes — kill cannon before it inflates the wave too much.</span>
+</div>
+
+<div class="lbl">Roam Readiness — All 5 Must Be True</div>
+<div id="cl-roam" class="card card-gold" data-checklist="cl-roam">
+  <div class="cl-header">
+    <span class="cl-title">Roam Checklist</span>
+    <div class="cl-actions">
+      <button class="cl-btn" data-action="all">All ✓</button>
+      <button class="cl-btn danger" data-action="reset">Reset</button>
+    </div>
+  </div>
+  <div class="progress-header"><span class="progress-label">Readiness</span><span class="progress-count">0 / 5</span></div>
+  <div class="progress-bar"><div class="progress-fill"></div></div>
+  <ul class="check-list">
+    <li class="check-item"><div class="checkbox"></div><span class="check-num green">✓</span><div class="check-body"><div class="check-text">Wave is crashing or already crashed into their tower</div><span class="check-sub">If wave is pushing TO you → stay and collect. ~200g and 500 XP lost per missed wave.</span></div></li>
+    <li class="check-item"><div class="checkbox"></div><span class="check-num green">✓</span><div class="check-body"><div class="check-text">You have lane priority — enemy pushed in or recalled</div><span class="check-sub">No priority = you arrive late and the fight is already decided. Wasted a wave for zero impact.</span></div></li>
+    <li class="check-item"><div class="checkbox"></div><span class="check-num green">✓</span><div class="check-body"><div class="check-text">There is a confirmed objective or kill opportunity to convert</div><span class="check-sub">Roaming to "see what happens" is not a plan. Know your destination before leaving lane.</span></div></li>
+    <li class="check-item"><div class="checkbox"></div><span class="check-num green">✓</span><div class="check-body"><div class="check-text">You have enough HP to fight when you arrive</div><span class="check-sub">60% HP roam = two kills fed instead of one. Recall first if needed — wave will still be there.</span></div></li>
+    <li class="check-item"><div class="checkbox"></div><span class="check-num green">✓</span><div class="check-body"><div class="check-text">You can physically walk there in time to matter</div><span class="check-sub">Bot to top = ~20s walk. Calculate it. Fight ends before you arrive: TP or don't go.</span></div></li>
+  </ul>
+</div>
+<div class="callout co-red"><strong>The #1 Wave Error:</strong> Letting your wave crash randomly with no plan attached. Every crash must be deliberate — for a recall, roam, dive, or objective. If you can't answer "what am I doing with this crash?" you don't have a game plan.</div>

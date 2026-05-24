@@ -1,0 +1,53 @@
+<div class="section-head">
+  <span class="section-num">05 /</span>
+  <h2 class="section-title">Vision Control</h2>
+  <p class="section-desc">Every death to a "5-man ambush" is a ward failure, not bad luck.</p>
+</div>
+<div class="stat-grid">
+  <div class="stat-card"><div class="stat-big">1.5+</div><div class="stat-sub">Vision score per minute minimum</div></div>
+  <div class="stat-card"><div class="stat-big">3</div><div class="stat-sub">Wards to establish a zone of control</div></div>
+  <div class="stat-card"><div class="stat-big">90s</div><div class="stat-sub">Before obj: full sweep and plant done</div></div>
+  <div class="stat-card"><div class="stat-big red">0</div><div class="stat-sub">Enemy wards allowed in your pit</div></div>
+</div>
+<div class="callout co-red" style="margin-top:13px"><strong>The Visibility Rule:</strong> If you cannot see 3 or more enemy champions on the minimap, do not walk forward. Every death to an ambush is a ward failure — not bad luck, not unlucky timing. Your mistake.</div>
+
+<div class="lbl">Ward vs Sweep Decision Trees</div>
+<div class="decision-q"><div class="decision-ql">Decision Point</div>Is an objective spawning in the next 90 seconds?</div>
+<div class="decision-branches">
+  <div class="branch-yes"><div class="branch-label">Yes →</div><strong>Sweep first, then plant.</strong> Clear enemy wards in pit and river BEFORE placing yours. Their ward watching you plant = they see your position and counter-engage with perfect timing. Order: sweep pit → sweep river → plant deep offensive wards.</div>
+  <div class="branch-no"><div class="branch-label">No →</div><strong>Defensive plant only.</strong> River bushes, tribrush on your side, approach paths. Save Oracle charges for pre-objective timing — don't waste charges on lanes with zero strategic value.</div>
+</div>
+<div style="margin-top:10px">
+  <div class="decision-q"><div class="decision-ql">Decision Point</div>Did your team just win a fight with 20-40 seconds of dead enemies?</div>
+  <div class="decision-branches">
+    <div class="branch-yes"><div class="branch-label">Yes →</div><strong>Deep ward immediately.</strong> Place in their jungle — their blue side, camp paths, lane approaches. This is your free information window. Support: this is your single highest-value action right now. Do not recall yet.</div>
+    <div class="branch-no"><div class="branch-label">No →</div>Stay in safe positions only. Never deep ward when enemies are alive and unaccounted for. You lose both the ward and your death timer — the exact opposite of what vision control should accomplish.</div>
+  </div>
+</div>
+
+<div class="lbl">Mandatory Wards by Phase</div>
+<div class="g2">
+  <div id="cl-vision-early" class="card" data-checklist="cl-vision-early">
+    <div class="cl-header"><span class="cl-title">Early Game (0-14 min)</span><div class="cl-actions"><button class="cl-btn danger" data-action="reset">Reset</button></div></div>
+    <div class="progress-header"><span class="progress-label">Warding</span><span class="progress-count">0 / 4</span></div>
+    <div class="progress-bar"><div class="progress-fill"></div></div>
+    <ul class="check-list">
+      <li class="check-item"><div class="checkbox"></div><span class="check-num">→</span><div class="check-body"><div class="check-text">River bush on your side — always</div><span class="check-sub">No exceptions. Push without this ward and you deserve the gank you receive.</span></div></li>
+      <li class="check-item"><div class="checkbox"></div><span class="check-num">→</span><div class="check-body"><div class="check-text">Enemy jungle entrance when pushing forward</div><span class="check-sub">Only push when this path is warded. Otherwise you are farming blind into a death.</span></div></li>
+      <li class="check-item"><div class="checkbox"></div><span class="check-num">→</span><div class="check-body"><div class="check-text">Dragon or Grub pit at 4:00</div><span class="check-sub">Vision before the 5:00 spawn wins the first objective information war every game.</span></div></li>
+      <li class="check-item"><div class="checkbox"></div><span class="check-num">→</span><div class="check-body"><div class="check-text">Track enemy jungler after every visible camp clear</div><span class="check-sub">Enemy clears red top-side at 2:00 → pathing top or mid, not bot. Dragon is free. Ping it.</span></div></li>
+    </ul>
+  </div>
+  <div id="cl-vision-mid" class="card" data-checklist="cl-vision-mid">
+    <div class="cl-header"><span class="cl-title">Mid Game (15-25 min)</span><div class="cl-actions"><button class="cl-btn danger" data-action="reset">Reset</button></div></div>
+    <div class="progress-header"><span class="progress-label">Warding</span><span class="progress-count">0 / 4</span></div>
+    <div class="progress-bar"><div class="progress-fill"></div></div>
+    <ul class="check-list">
+      <li class="check-item"><div class="checkbox"></div><span class="check-num">→</span><div class="check-body"><div class="check-text">Both Baron river entrances by 18:30</div><span class="check-sub">Baron spawns at 20:00. Planting at 19:45 = you already lost the vision war before it started.</span></div></li>
+      <li class="check-item"><div class="checkbox"></div><span class="check-num">→</span><div class="check-body"><div class="check-text">Deep enemy jungle — track their camp timers</div><span class="check-sub">Seeing their jungler farming at 19:00 tells you exactly where NOT to walk.</span></div></li>
+      <li class="check-item"><div class="checkbox"></div><span class="check-num">→</span><div class="check-body"><div class="check-text">Pixel brush and Dragon-side tri-brush</div><span class="check-sub">Dragon side vision = safe poke + flanking protection in every nearby teamfight.</span></div></li>
+      <li class="check-item"><div class="checkbox"></div><span class="check-num red">✕</span><div class="check-body"><div class="check-text">SWEEP enemy wards out of the pit before starting Baron</div><span class="check-sub">Their pit ward = they see your HP, know your smite timing, counter-smite perfectly. Sweep first.</span></div></li>
+    </ul>
+  </div>
+</div>
+<div class="callout co-blue"><strong>Faelights — New in 2026:</strong> A vision layer on top of wards providing temporal and positional information. Track enemy Faelight movements — they reveal rotation intentions earlier than wards used to. Enemy Faelight moving Baron-side at 18:00 = start your setup immediately.</div>
