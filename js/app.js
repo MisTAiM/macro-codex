@@ -4,6 +4,7 @@ import { initClock } from './clock.js';
 import { initRespawnCalc, initDeathCalc } from './calculators.js';
 import { initChecklist, resetAll, updateFooter, initAllInContainer } from './checklist.js';
 import { WIN_CONDITIONS } from './data.js';
+import { initLogs } from './logs-ui.js';
 
 // ── Sections manifest ──
 const SECTIONS = [
@@ -17,6 +18,7 @@ const SECTIONS = [
   { id: 'roles',      label: '08 Roles'      },
   { id: 'wincond',    label: '09 Win Cond'   },
   { id: 'notes',      label: '10 Notes'      },
+  { id: 'logs',       label: '11 Game Log'   },
 ];
 
 // ── Init ──
@@ -78,6 +80,10 @@ document.addEventListener('sectionLoaded', ({ detail: { id } }) => {
 
     case 'notes':
       initNotes(sec);
+      break;
+
+    case 'logs':
+      initLogs(sec);
       break;
   }
 

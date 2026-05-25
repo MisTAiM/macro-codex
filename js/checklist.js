@@ -17,6 +17,9 @@ let state = loadState();
 export function initChecklist(listId) {
   const container = document.getElementById(listId);
   if (!container) return;
+  // Guard: never initialize the same list twice (prevents double-toggle bug)
+  if (container.dataset.clInit) return;
+  container.dataset.clInit = '1';
 
   const items    = container.querySelectorAll('.check-item, .priority-item');
   const fillEl   = container.querySelector('.progress-fill');

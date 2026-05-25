@@ -1,0 +1,157 @@
+<div class="section-head">
+  <span class="section-num">11 /</span>
+  <h2 class="section-title">Game Log and Coaching</h2>
+  <p class="section-desc">Track your games. Get real analysis on what you're doing wrong and why.</p>
+</div>
+
+<div class="callout co-purple">
+  <strong>How this works:</strong> Log your stats after each game. The engine calculates the actual gold, XP, and objective cost of each mistake using 2026 formulas — then tells you exactly what to fix and how. Patterns across multiple games reveal your real weak spots.
+</div>
+
+<!-- ── TABS ── -->
+<div class="log-tabs">
+  <button class="log-tab active" data-tab="log-form">Log a Game</button>
+  <button class="log-tab" data-tab="log-history">History</button>
+  <button class="log-tab" data-tab="log-patterns">Pattern Report</button>
+</div>
+
+<!-- ════════════ LOG FORM ════════════ -->
+<div id="log-form" class="log-panel active">
+  <div class="log-form-grid">
+
+    <!-- Column 1: Game meta -->
+    <div class="log-col">
+      <div class="log-group-label">Game Info</div>
+      <div class="log-field">
+        <label>Result</label>
+        <div class="log-toggle-group" data-field="result">
+          <button class="log-toggle" data-val="win">WIN</button>
+          <button class="log-toggle" data-val="loss">LOSS</button>
+        </div>
+      </div>
+      <div class="log-field">
+        <label>Role</label>
+        <div class="log-toggle-group" data-field="role">
+          <button class="log-toggle" data-val="top">TOP</button>
+          <button class="log-toggle" data-val="jungle">JGL</button>
+          <button class="log-toggle" data-val="mid">MID</button>
+          <button class="log-toggle" data-val="bot">BOT</button>
+          <button class="log-toggle" data-val="support">SUP</button>
+        </div>
+      </div>
+      <div class="log-field">
+        <label>Champion</label>
+        <input type="text" class="log-input" data-field="champion" placeholder="e.g. Aatrox">
+      </div>
+      <div class="log-field">
+        <label>Game duration (min)</label>
+        <input type="number" class="log-input" data-field="gameDuration" min="15" max="70" placeholder="e.g. 28">
+      </div>
+    </div>
+
+    <!-- Column 2: Core stats -->
+    <div class="log-col">
+      <div class="log-group-label">Core Stats</div>
+      <div class="log-field">
+        <label>CS per minute</label>
+        <input type="number" class="log-input" data-field="csPerMin" min="0" max="14" step="0.1" placeholder="e.g. 7.2">
+        <span class="log-bench" data-bench="csPerMin"></span>
+      </div>
+      <div class="log-field">
+        <label>Vision score / min</label>
+        <input type="number" class="log-input" data-field="visionPerMin" min="0" max="5" step="0.1" placeholder="e.g. 1.1">
+        <span class="log-bench" data-bench="visionPerMin"></span>
+      </div>
+      <div class="log-field">
+        <label>Total deaths</label>
+        <input type="number" class="log-input" data-field="deaths" min="0" max="20" placeholder="e.g. 3">
+      </div>
+      <div class="log-field">
+        <label>Deaths in fog (no vision)</label>
+        <input type="number" class="log-input" data-field="deathsInFog" min="0" max="15" placeholder="e.g. 1">
+        <span class="log-field-hint">Deaths you could have avoided with a ward</span>
+      </div>
+    </div>
+
+    <!-- Column 3: Macro decisions -->
+    <div class="log-col">
+      <div class="log-group-label">Macro Decisions</div>
+      <div class="log-field">
+        <label>Crashed wave before objectives?</label>
+        <select class="log-select" data-field="crashedBeforeObj">
+          <option value="">— select —</option>
+          <option value="always">Always</option>
+          <option value="usually">Usually</option>
+          <option value="sometimes">Sometimes</option>
+          <option value="rarely">Rarely</option>
+          <option value="never">Never</option>
+        </select>
+      </div>
+      <div class="log-field">
+        <label>Rotated out of lane by 14:00?</label>
+        <div class="log-toggle-group" data-field="rotatedAt14">
+          <button class="log-toggle" data-val="yes">YES</button>
+          <button class="log-toggle" data-val="no">NO</button>
+        </div>
+      </div>
+      <div class="log-field">
+        <label>Baron vision set by 18:30?</label>
+        <div class="log-toggle-group" data-field="baronVisionBy1830">
+          <button class="log-toggle" data-val="yes">YES</button>
+          <button class="log-toggle" data-val="no">NO</button>
+          <button class="log-toggle" data-val="na">N/A</button>
+        </div>
+      </div>
+      <div class="log-field">
+        <label>Objectives taken after winning a fight</label>
+        <input type="number" class="log-input" data-field="postFightObjectives" min="0" max="10" placeholder="e.g. 2">
+      </div>
+      <div class="log-field">
+        <label>Times you farmed/recalled after a win instead</label>
+        <input type="number" class="log-input" data-field="postFightFarmed" min="0" max="10" placeholder="e.g. 1">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="log-field" style="margin-top:16px">
+    <label>Biggest macro mistake this game</label>
+    <textarea class="log-textarea" data-field="biggestMistake" placeholder="e.g. Farmed top lane at 15 min while team lost Dragon 4v5. I had priority but didn't rotate."></textarea>
+  </div>
+
+  <div class="log-submit-row">
+    <button class="log-submit-btn" id="log-submit">Analyze and Save Game</button>
+    <button class="log-clear-btn" id="log-clear-form">Clear Form</button>
+    <span class="log-submit-hint">Analysis runs immediately after saving</span>
+  </div>
+</div>
+
+<!-- ════════════ ANALYSIS PANEL (shown after submit) ════════════ -->
+<div id="log-analysis" class="log-panel" style="display:none">
+  <div class="analysis-header">
+    <div class="analysis-header-left">
+      <span class="analysis-eyebrow">Game Analysis</span>
+      <h3 class="analysis-title" id="analysis-title">Loading...</h3>
+    </div>
+    <button class="log-back-btn" id="analysis-back">← Log Another Game</button>
+  </div>
+  <div id="analysis-content"></div>
+</div>
+
+<!-- ════════════ HISTORY ════════════ -->
+<div id="log-history" class="log-panel">
+  <div class="history-header">
+    <span class="log-group-label" style="margin:0">Game History</span>
+    <button class="log-clear-btn" id="log-clear-all">Clear All Logs</button>
+  </div>
+  <div id="history-list">
+    <div class="history-empty">No games logged yet. Log your first game to begin coaching analysis.</div>
+  </div>
+</div>
+
+<!-- ════════════ PATTERNS ════════════ -->
+<div id="log-patterns" class="log-panel">
+  <div id="patterns-content">
+    <div class="history-empty">Log at least 2 games to generate a pattern report.</div>
+  </div>
+</div>
