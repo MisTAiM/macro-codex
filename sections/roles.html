@@ -12,21 +12,156 @@
 </div>
 
 <div id="role-top" class="role-panel">
-  <div class="callout co-gold"><strong>You know laning.</strong> Top macro problem is almost always: "I won lane. Now what?" The answer is not "keep farming top lane." Here is the phase-by-phase rotation plan every Challenger top laner follows.</div>
+
+  <div class="callout co-red">
+    <strong>The "rotate at 14" rule does NOT apply to top lane.</strong> Top lane in 2026 has completely different macro rules than every other role. It is an island role with TP as its primary global tool and a level 20 cap that rewards staying in lane longer than anyone else. Read this section before the others.
+  </div>
+
+  <div class="lbl">The 2026 Top Lane Fundamentals — What Changed Everything</div>
+
+  <div class="formula">
+    <span class="formula-label">Top Lane Role Quest Rewards (2026 — 1,200 Points)</span>
+    Level cap raised to 20 (everyone else caps at 18)
+    +600 XP immediately on quest completion
+    All future XP gains increased by 12.5% permanently
+    If you took Teleport: arrival now grants a 30% max health shield for 30 seconds (offensive TP tool)
+    If you did NOT take Teleport: Unleashed Teleport granted free at 7-minute cooldown
+    Anti-laneswap: minion gold/XP reduced 25% outside top lane until level 3
+
+    WHAT THIS MEANS MACRO-WISE:
+    Top is the ONLY role that can realistically farm to level 20. At level 19-20 while the enemy team
+    is level 18, your champion is playing a fundamentally different game than everyone else on the map.
+    Your job is to EARN that level advantage — then weaponize it.
+  </div>
+
+  <div class="formula green">
+    <span class="formula-label">The Island Phase Math (0 to ~18 minutes)</span>
+    Farming top lane at 8 CS/min = ~168g/min in plates, CS, and tower gold
+    Dragon is worth 150g global (×5 players = 750g team value)
+    But: 750g / 168g/min = you need to "lose" only 4.5 minutes of top lane farming for Dragon to break even
+    HOWEVER: If you die rotating without TP — you give a bounty (~300g) AND lose your death timer (~40s)
+    AND lose the wave that crashed while you were dead AND give them free CS on your side
+    Total cost of a failed rotation: 300g bounty + 2-3 waves (350-530g) = 650-830g swing
+
+    CONCLUSION: Only rotate when TP is available OR you can walk there in time AND survive the fight.
+    Farming top and TPing is ALWAYS better than walking mid-game if your TP is up.
+  </div>
+
+  <div class="lbl">TP Decision Tree — The Core of Top Lane Macro</div>
+
+  <div style="margin-bottom:12px">
+    <div class="decision-q"><div class="decision-ql">Primary Question — Before Every TP</div>Does this TP create a decisive numbers advantage that we can immediately convert to an objective or kill?</div>
+    <div class="decision-branches">
+      <div class="branch-yes"><div class="branch-label">Yes → Use TP</div>Examples: team is fighting Dragon 4v5, team is fighting Baron 4v5, a winning teamfight is happening bot and you can take the tower + Dragon after, a dive is set up and your arrival flips it. <strong>Your TP shield makes offensive TPs stronger in 2026.</strong></div>
+      <div class="branch-no"><div class="branch-label">No → Farm Top</div>If the fight is already over (won or lost), if it's just a skirmish with no objective, if you're walking into a losing fight — stay top. Crash your wave, collect the plates, and set up the NEXT TP play.</div>
+    </div>
+  </div>
+
+  <div class="formula">
+    <span class="formula-label">TP Cooldown States — Know Which Phase You Are In</span>
+    TP up + wave crashing = MAXIMUM power state. You can farm, crash, and TP to any objective.
+    TP on cooldown (7 min base, or 7 min Unleashed) = you are committed to your side of the map.
+    During TP cooldown: Do NOT walk to objectives. Crash waves, collect plates, ward river.
+    When TP comes back: immediately think "what is the next objective I can TP for?"
+
+    2026 NOTE: If you took TP as your spell and completed your Role Quest, your TP grants a
+    30% max health shield on arrival. This means you can TP INTO fights aggressively, not just defensively.
+    Treat the shield as ~500-800 effective HP depending on your max health at the time.
+  </div>
+
+  <div class="lbl">When Top Lane Stays Until 20 Minutes</div>
+
+  <div class="callout co-gold">
+    This is the decision that most Gold players get wrong. Farming top until 20 minutes is NOT throwing — it is correct macro in specific conditions. Here is when it is right, when it is wrong, and the math behind it.
+  </div>
+
+  <div class="g2">
+    <div class="card card-green">
+      <div class="card-title green">Farm Top Until ~18-20 min WHEN:</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--td)">
+        <li>✓ <span style="color:var(--t)">You are winning your 1v1 and denying enemy CS</span> — your gold lead stays ahead even staying top</li>
+        <li>✓ <span style="color:var(--t)">Your TP is available</span> — you can reach any objective in time via TP</li>
+        <li>✓ <span style="color:var(--t)">Your champion scales with gold</span> — (Nasus, Fiora, Camille, Garen after level advantage)</li>
+        <li>✓ <span style="color:var(--t)">Enemy top is also top side</span> — nullifies the 4v4 vs. 4v5 disadvantage</li>
+        <li>✓ <span style="color:var(--t)">Void Grubs were secured by your team</span> — Voidmites attack towers, your split push has extra power</li>
+        <li>✓ <span style="color:var(--t)">You are getting plates</span> — every plate you collect is irreversible gold your team doesn't have to share</li>
+      </ul>
+    </div>
+    <div class="card card-red">
+      <div class="card-title red">Do NOT Farm Top Past 18 min WHEN:</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--td)">
+        <li>✕ <span style="color:var(--t)">Your TP is on cooldown</span> — you have zero global presence. Baron at 20:00 is uncontestable by you.</li>
+        <li>✕ <span style="color:var(--t)">You are losing your 1v1</span> — you are not generating gold, just bleeding XP and being zoned</li>
+        <li>✕ <span style="color:var(--t)">Baron spawns in &lt;90 seconds and your team is 4</span> — a 4v5 Baron fight loses you the entire game state</li>
+        <li>✕ <span style="color:var(--t)">Zero enemies responding to your split</span> — you are not applying pressure. Group immediately.</li>
+        <li>✕ <span style="color:var(--t)">Your team comp needs you in fights to win</span> — (engage tank, hard CC initiator) — your teamfight is the win condition</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="formula">
+    <span class="formula-label">The 20-Minute Window — Baron Timing Changes Top Lane Macro</span>
+    Baron spawns at 20:00. This is 5 minutes earlier than last season.
+    Top lane used to have until 25:00 before Baron was relevant. Now it is 20:00.
+
+    WHAT THIS MEANS FOR TOP:
+    Your latest possible TP to Baron is: 19:00-19:30 (gives you time to arrive and set up)
+    If your TP cooldown will not be up by 19:30: you must have WALKED to Baron side by 19:00
+    If you cannot do either: your team is fighting a 4v5 Baron fight at 20:00.
+
+    TIMING YOUR TP COOLDOWN AROUND BARON:
+    If TP goes on cooldown at 13:00: it comes back at 20:00 (7 min CD). Exact Baron spawn. TP ready.
+    If TP goes on cooldown at 14:00: comes back at 21:00. You MISS the first Baron contest.
+    If TP goes on cooldown at 15:00: comes back at 22:00. You miss first Baron.
+    Plan your TP usage around this. Burning TP at 14:00 means missing Baron at 20:00.
+  </div>
+
+  <div class="lbl">Void Grubs and Top Lane — What Most Players Miss</div>
+
+  <div class="formula green">
+    <span class="formula-label">Grubs Give Top Lane Split Pushers a Tower-Shredding Multiplier</span>
+    Void Grubs (spawn 6:00, Wave 2 @ 10:00): each gives your team Voidmite stacks
+    Voidmites are creatures that spawn and attack towers when you attack them
+    3+ Grubs = significant tower damage acceleration on every structure hit
+    6 Grubs = maximum Voidmite output — towers fall dramatically faster
+
+    FOR TOP LANE SPECIFICALLY:
+    If your team secured 4-6 Grubs, your split push is exponentially stronger.
+    Grub stacks effectively reduce the time to take a tower from ~30s to significantly less.
+    A top laner with 6-stack Grub pressure + Crystalline Overgrowth can collapse an outer tower fast.
+    This is why Grubs are a higher priority for split-push comps than dive/engage comps.
+  </div>
+
+  <div class="lbl">Top Lane Role Quest Checklist</div>
   <div id="cl-top" class="card" data-checklist="cl-top">
-    <div class="cl-header"><span class="cl-title">Top Lane Macro Order</span><div class="cl-actions"><button class="cl-btn danger" data-action="reset">Reset</button></div></div>
-    <div class="progress-header"><span class="progress-label">Top Lane</span><span class="progress-count">0 / 6</span></div>
+    <div class="cl-header"><span class="cl-title">Top Lane Macro Decisions</span><div class="cl-actions"><button class="cl-btn danger" data-action="reset">Reset</button></div></div>
+    <div class="progress-header"><span class="progress-label">Top Lane</span><span class="progress-count">0 / 8</span></div>
     <div class="progress-bar"><div class="progress-fill"></div></div>
     <ul class="check-list">
-      <li class="check-item"><div class="checkbox"></div><span class="check-num">01</span><div class="check-body"><div class="check-text">At 14:00: crash top wave and rotate to Herald or Dragon</div><span class="check-sub">Sitting in top lane past 14 min while team contests objectives = liability, not a player.</span></div></li>
-      <li class="check-item"><div class="checkbox"></div><span class="check-num">02</span><div class="check-body"><div class="check-text">After every objective: TP back to top and continue split pressure</div><span class="check-sub">The single biggest thing Challenger top laners do that Gold players miss. TP creates a second self.</span></div></li>
-      <li class="check-item"><div class="checkbox"></div><span class="check-num">03</span><div class="check-body"><div class="check-text">Decide: am I the split threat or the teamfighter?</div><span class="check-sub">Split: 1-3-1 all game, only group for Baron/Elder. Teamfight: group at 15 min and anchor frontline.</span></div></li>
-      <li class="check-item"><div class="checkbox"></div><span class="check-num">04</span><div class="check-body"><div class="check-text">TP math: use it for real value, not ego saves</div><span class="check-sub">TP to tower = ~160g plates + crash + rotate. TP to dying fight = two people fed and 4-min CD wasted.</span></div></li>
-      <li class="check-item"><div class="checkbox"></div><span class="check-num">05</span><div class="check-body"><div class="check-text">Collect tower plates constantly — permanent in 2026</div><span class="check-sub">Plates are permanent now including base towers. Farming them all game = 800-1200g advantage.</span></div></li>
-      <li class="check-item"><div class="checkbox"></div><span class="check-num">06</span><div class="check-body"><div class="check-text">Check: how many enemies are responding to my split?</div><span class="check-sub">Two or more responding: stay and draw them. Zero responding: stop splitting. You are useless. Group.</span></div></li>
+      <li class="check-item"><div class="checkbox"></div><span class="check-num">01</span><div class="check-body"><div class="check-text">Is my TP up or on cooldown? Plan the next 7 minutes around this answer.</div><span class="check-sub">TP up = global presence, farm freely and TP to objectives. TP down = commit to your side. Do not walk to objectives.</span></div></li>
+      <li class="check-item"><div class="checkbox"></div><span class="check-num">02</span><div class="check-body"><div class="check-text">Am I winning my 1v1? If yes, farm. If no, freeze and survive.</div><span class="check-sub">Winning = keep farming and generating lead. Losing = freeze under tower, deny them free CS, wait for jungler, do not fight.</span></div></li>
+      <li class="check-item"><div class="checkbox"></div><span class="check-num">03</span><div class="check-body"><div class="check-text">Collect every plate. They are local gold that does not split with your team.</div><span class="check-sub">Plates are permanent in 2026 — even on base towers. A top laner farming plates all game accumulates 600-1,200g more than one who ignores them.</span></div></li>
+      <li class="check-item"><div class="checkbox"></div><span class="check-num">04</span><div class="check-body"><div class="check-text">Am I the split pusher or the teamfighter? Commit to one answer before 15:00.</div><span class="check-sub">Split: 1-3-1 all game, only TP for Baron/Elder/crucial fight. Teamfight: walk to objectives at 15-17 min and anchor frontline. Trying to do both does neither.</span></div></li>
+      <li class="check-item"><div class="checkbox"></div><span class="check-num">05</span><div class="check-body"><div class="check-text">TP cooldown math: will my TP be up for Baron at 20:00?</div><span class="check-sub">TP burned at 13:00 = back by 20:00 exactly. Burned at 14:00 = you miss first Baron. Know this before you TP for anything pre-20.</span></div></li>
+      <li class="check-item"><div class="checkbox"></div><span class="check-num">06</span><div class="check-body"><div class="check-text">Is my Role Quest complete? If yes, my level cap is 20 — stay in lane longer to leverage this.</div><span class="check-sub">Level 19-20 vs. level 18 enemies is a catastrophic stat advantage. The quest rewards staying in lane. Use it — do not abandon the level lead by grouping too early.</span></div></li>
+      <li class="check-item"><div class="checkbox"></div><span class="check-num">07</span><div class="check-body"><div class="check-text">How many enemies are responding to my split? 2+ = stay. 0 = group.</div><span class="check-sub">The split push only works if it draws attention. If nobody is coming, you are farming irrelevant top and your 4 teammates are fighting 4v5.</span></div></li>
+      <li class="check-item"><div class="checkbox"></div><span class="check-num">08</span><div class="check-body"><div class="check-text">After a team objective: TP back to top and continue applying pressure.</div><span class="check-sub">This is the tempo loop. TP to Dragon/Baron fight → win it → TP back to top → crash wave → collect plates → repeat. Each cycle widens your lead.</span></div></li>
     </ul>
   </div>
-  <div class="formula green"><span class="formula-label">Split Push Math</span>You drawing 2 enemies + 4 teammates take Baron = <span class="result">net win</span><br>You drawing 1 = situational | You drawing 0 = <span class="warn">useless. Group immediately.</span><br><br>Test: after 30s in side lane, how many pinged you? 2+ = keep splitting. 0-1 = group now.</div>
+
+  <div class="formula">
+    <span class="formula-label">Split Push Math — The Real Numbers</span>
+    You drawing 2 enemies: your team is 4v3 everywhere else on the map.
+    Baron/Dragon 4v3 = decisive. Tower sieges 4v3 = free.
+    You drawing 1 enemy: team has 4v4 fights everywhere. Neutral at best.
+    You drawing 0 enemies: <span class="warn">you are a ghost. Group immediately. You have zero macro impact.</span>
+
+    PLATE MATH: 5 plates per outer tower × 160g (to you, not split) = 800g if you take all 5
+    Plus the outer tower itself: 150-300g split (~50-100g to you) + 50g global
+    Total top lane outer tower value to the top laner: ~850-1,000g
+    That is more than a completed component item earned entirely from your own play.
+    No other role can generate this kind of unshared gold from one objective.
+  </div>
 </div>
 
 <div id="role-bot" class="role-panel">
