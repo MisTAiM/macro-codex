@@ -1,0 +1,338 @@
+/* ══════════════════════════════════════════════════
+   ANIMATIONS — macro-codex
+   ══════════════════════════════════════════════════ */
+
+/* ── HEADER GRID PULSE ── */
+@keyframes gridPulse {
+  0%, 100% { opacity: .012; }
+  50%       { opacity: .028; }
+}
+.header::before { animation: gridPulse 6s ease-in-out infinite; }
+
+/* ── HEADER TITLE SHIMMER ── */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.header-title span {
+  background: linear-gradient(90deg, #c9a227 30%, #f5d77a 50%, #c9a227 70%);
+  background-size: 800px 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* ── PHASE DOTS PULSE ── */
+@keyframes phasePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201,162,39,.5); }
+  50%       { box-shadow: 0 0 0 5px rgba(201,162,39,0); }
+}
+.phase-dot.active { animation: phasePulse 2s ease-in-out infinite; }
+
+/* ── CLOCK PULSE WHEN RUNNING ── */
+@keyframes clockTick {
+  0%, 49% { opacity: 1; }
+  50%, 99% { opacity: .7; }
+}
+.clock-display.running { animation: clockTick 1s step-end infinite; }
+
+/* ── SECTION FADE-IN ── */
+@keyframes sectionIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.section.active { animation: sectionIn .22s ease-out both; }
+
+/* ── CARD HOVER LIFT ── */
+.card, .calc-card, .spell-card, .wave-card, .stat-card,
+.map-pattern, .phase-block, .baron-step {
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.card:hover, .calc-card:hover, .wave-card:hover, .stat-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(201,162,39,.25);
+  box-shadow: 0 6px 24px rgba(0,0,0,.35);
+}
+
+/* ── SPELL CARD HOVER GLOW BY PRIORITY ── */
+.spell-card:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,.35); }
+.spell-card:has(.spell-critical):hover { border-color: rgba(201,51,51,.35); box-shadow: 0 6px 24px rgba(201,51,51,.1); }
+.spell-card:has(.spell-major):hover    { border-color: rgba(201,162,39,.4);  box-shadow: 0 6px 24px rgba(201,162,39,.1); }
+.spell-card:has(.spell-minor):hover    { border-color: rgba(42,127,201,.35); box-shadow: 0 6px 24px rgba(42,127,201,.1); }
+
+/* ── NAV BUTTON INDICATOR SLIDE ── */
+.nav-btn { position: relative; overflow: hidden; }
+.nav-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%;
+  width: 0; height: 2px;
+  background: var(--g);
+  transition: width .2s ease, left .2s ease;
+}
+.nav-btn:hover::after { width: 60%; left: 20%; }
+.nav-btn.active::after { width: 100%; left: 0; }
+
+/* ── PROGRESS BAR FILL ANIMATION ── */
+@keyframes fillIn {
+  from { width: 0; }
+}
+.progress-fill { animation: fillIn .6s cubic-bezier(.4,0,.2,1) both; }
+.progress-fill.complete {
+  background: linear-gradient(90deg, #1a6b3a, var(--gr));
+  animation: fillIn .6s cubic-bezier(.4,0,.2,1) both, completePulse 1s ease-out .6s both;
+}
+@keyframes completePulse {
+  0%   { box-shadow: 0 0 0 0 rgba(42,157,92,.6); }
+  100% { box-shadow: 0 0 0 8px rgba(42,157,92,0); }
+}
+
+/* ── CHECKBOX CHECK ANIMATION ── */
+@keyframes checkPop {
+  0%   { transform: scale(0.5); opacity: 0; }
+  60%  { transform: scale(1.2); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.check-item.checked .checkbox::after { animation: checkPop .2s ease-out both; }
+.priority-item.checked .p-checkbox::after { animation: checkPop .2s ease-out both; }
+
+/* ── CHECKLIST ROW STRIKE ANIMATION ── */
+.check-item .check-text { transition: color .2s ease; }
+.check-item.checked .check-text {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+/* ── CALLOUT ENTRANCE ── */
+@keyframes calloutIn {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.callout { animation: calloutIn .3s ease-out both; }
+
+/* ── FORMULA LEFT BORDER PULSE ── */
+@keyframes formulaBorderPulse {
+  0%, 100% { border-left-color: var(--g); }
+  50%       { border-left-color: var(--gl); }
+}
+.formula:hover { animation: formulaBorderPulse 1.5s ease-in-out infinite; }
+.formula.red:hover { animation: none; border-left-color: var(--r); }
+.formula.green:hover { animation: none; border-left-color: var(--gr); }
+
+/* ── PRIORITY ITEMS ENTRANCE STAGGER ── */
+.priority-list .priority-item {
+  animation: sectionIn .2s ease-out both;
+}
+.priority-list .priority-item:nth-child(1) { animation-delay: .04s; }
+.priority-list .priority-item:nth-child(2) { animation-delay: .08s; }
+.priority-list .priority-item:nth-child(3) { animation-delay: .12s; }
+.priority-list .priority-item:nth-child(4) { animation-delay: .16s; }
+.priority-list .priority-item:nth-child(5) { animation-delay: .20s; }
+.priority-list .priority-item:nth-child(6) { animation-delay: .24s; }
+
+/* ── CHECKLIST ITEM STAGGER ── */
+.check-list .check-item {
+  animation: sectionIn .18s ease-out both;
+}
+.check-list .check-item:nth-child(1) { animation-delay: .03s; }
+.check-list .check-item:nth-child(2) { animation-delay: .06s; }
+.check-list .check-item:nth-child(3) { animation-delay: .09s; }
+.check-list .check-item:nth-child(4) { animation-delay: .12s; }
+.check-list .check-item:nth-child(5) { animation-delay: .15s; }
+.check-list .check-item:nth-child(6) { animation-delay: .18s; }
+.check-list .check-item:nth-child(7) { animation-delay: .21s; }
+
+/* ── BARON/DRAGON CALLOUT PULSE (danger signal) ── */
+@keyframes dangerPulse {
+  0%, 100% { border-color: rgba(201,51,51,.3); }
+  50%       { border-color: rgba(201,51,51,.7); box-shadow: 0 0 12px rgba(201,51,51,.15); }
+}
+.co-red { animation: dangerPulse 3s ease-in-out infinite; }
+
+/* ── NAV PROGRESS DOT POP ── */
+@keyframes dotPop {
+  0%   { transform: scale(0); opacity: 0; }
+  60%  { transform: scale(1.4); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.prog-dot.show { animation: dotPop .25s ease-out both; }
+
+/* ── STAT NUMBER COUNT-UP FEEL ── */
+@keyframes statIn {
+  from { opacity: 0; transform: scale(.8) translateY(6px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+.stat-big { animation: statIn .3s cubic-bezier(.34,1.56,.64,1) both; }
+
+/* ── HEADER STATS STAGGER ── */
+.header-stats > div:nth-child(1) { animation: statIn .3s .05s cubic-bezier(.34,1.56,.64,1) both; }
+.header-stats > div:nth-child(2) { animation: statIn .3s .10s cubic-bezier(.34,1.56,.64,1) both; }
+.header-stats > div:nth-child(3) { animation: statIn .3s .15s cubic-bezier(.34,1.56,.64,1) both; }
+.header-stats > div:nth-child(4) { animation: statIn .3s .20s cubic-bezier(.34,1.56,.64,1) both; }
+.header-stats > div:nth-child(5) { animation: statIn .3s .25s cubic-bezier(.34,1.56,.64,1) both; }
+
+/* ── GAME LOG SUBMIT BUTTON PULSE ── */
+@keyframes submitPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201,162,39,.4); }
+  50%       { box-shadow: 0 0 0 6px rgba(201,162,39,0); }
+}
+.log-submit-btn { animation: submitPulse 2.5s ease-in-out infinite; }
+.log-submit-btn:hover { animation: none; }
+
+/* ── TABLE ROW HOVER ── */
+.data-table tr { transition: background .1s ease; }
+
+/* ── WAVE CARD TOP BORDER GLOW ── */
+@keyframes waveBorderGlow {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: .6; }
+}
+.wave-card::before { animation: waveBorderGlow 2s ease-in-out infinite; }
+
+/* ── ROLE TAB ACTIVE INDICATOR ── */
+.role-tab { transition: all .15s ease; }
+.role-tab.active {
+  box-shadow: 0 2px 0 0 var(--g) inset;
+}
+
+/* ── ISSUE CARD EXPAND ANIMATION ── */
+.issue-body {
+  animation: sectionIn .2s ease-out both;
+}
+
+/* ── REDUCE MOTION OVERRIDES ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* ══════════════════════════════════════════════════
+   VISION MAP LAYOUT
+   ══════════════════════════════════════════════════ */
+
+.ward-map-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 12px 0;
+}
+@media (max-width: 720px) { .ward-map-container { grid-template-columns: 1fr; } }
+
+.ward-map-main { display: flex; flex-direction: column; gap: 8px; }
+
+.ward-map-img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--bog);
+  display: block;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.ward-map-img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 32px rgba(0,0,0,.5);
+}
+
+.ward-map-caption {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 8px 12px;
+  background: var(--bg2);
+  border-radius: var(--radius);
+  border: 1px solid var(--bo);
+}
+.ward-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--td);
+}
+.ward-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.ward-dot.gold  { background: var(--g); }
+.ward-dot.green { background: var(--gr); }
+
+.ward-map-details { display: flex; flex-direction: column; gap: 12px; }
+
+.ward-detail-block {
+  background: var(--bg3);
+  border: 1px solid var(--bo);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color .15s ease;
+}
+.ward-detail-block:hover { border-color: var(--bog); }
+
+.ward-detail-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--g);
+  text-transform: uppercase;
+  padding: 8px 12px;
+  background: var(--bg2);
+  border-bottom: 1px solid var(--bo);
+}
+
+.ward-detail-img {
+  width: 100%;
+  display: block;
+}
+
+/* ── VISION ITEMS ROW ── */
+.vision-items-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 10px 0;
+}
+@media (max-width: 720px) { .vision-items-row { grid-template-columns: 1fr 1fr; } }
+
+.vision-item-card {
+  background: var(--bg3);
+  border: 1px solid var(--bo);
+  border-radius: var(--radius);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  transition: transform .15s ease, border-color .15s ease;
+}
+.vision-item-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--bog);
+}
+
+.vision-item-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid var(--bog);
+  image-rendering: pixelated;
+}
+
+.vision-item-name {
+  font-family: var(--display);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--g);
+}
+
+.vision-item-desc {
+  font-size: 11px;
+  color: var(--td);
+  line-height: 1.55;
+}
