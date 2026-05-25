@@ -41,16 +41,66 @@
   </div>
 </div>
 
-<div class="lbl">Summoner Spells</div>
-<div class="card">
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0">
-    <div class="trow"><span class="trow-name">Flash</span><span class="trow-val">5:00 CD</span><span class="trow-sub">highest priority</span></div>
-    <div class="trow"><span class="trow-name">Teleport to Tower</span><span class="trow-val">4:00 CD</span></div>
-    <div class="trow"><span class="trow-name">Teleport Non-tower</span><span class="trow-val">5:00 CD</span></div>
-    <div class="trow"><span class="trow-name">Teleport Cancelled</span><span class="trow-val">3:20 CD</span></div>
-    <div class="trow"><span class="trow-name">Ghost / Ignite / Exhaust</span><span class="trow-val">3:30 CD</span></div>
-    <div class="trow"><span class="trow-name">Smite</span><span class="trow-val">~15s CD</span><span class="trow-sub">track for Baron</span></div>
+<div class="lbl">Enemy Summoner Spell Tracking</div>
+<div class="callout co-gold"><strong>Tracking enemy summoner spells is free information every game.</strong> When you see Flash, TP, or Ignite burned — note the game time. Add the cooldown. Fight before it comes back. Type it in chat so your whole team knows.</div>
+
+<div class="g2">
+  <div class="spell-card">
+    <div class="spell-header">
+      <span class="spell-name">Flash</span>
+      <span class="spell-cd">5:00 CD</span>
+    </div>
+    <div class="spell-priority spell-critical">Track Priority: S-Tier</div>
+    <div class="spell-body">The most impactful summoner in the game. Flash down on an enemy laner means you can all-in freely, execute a tower dive, or roam knowing they can't follow or escape. Flash down on an enemy jungler cuts their gank threat significantly — they can't close distance or escape counter-ganks.</div>
+    <div class="spell-rule"><strong>Rule:</strong> Flash used at 8:30 → back at 13:30. Type "Flash [name] 8:30" in chat. Every fight between now and 13:30 is played with an enormous advantage.</div>
   </div>
+
+  <div class="spell-card">
+    <div class="spell-header">
+      <span class="spell-name">Teleport</span>
+      <span class="spell-cd-group">
+        <span>→ Tower target: <strong>4:00</strong></span>
+        <span>→ Non-tower target: <strong>5:00</strong></span>
+        <span>→ Cancelled mid-cast: <strong>3:20</strong></span>
+        <span>→ Unleashed TP (top quest): <strong>7:00</strong></span>
+      </span>
+    </div>
+    <div class="spell-priority spell-major">Track Priority: A-Tier — Especially Top vs Top</div>
+    <div class="spell-body">TP controls global macro. Enemy top TP down = they cannot respond to Dragon or Baron for 4-7 minutes without walking. You have a full global-presence window to roam, rotate, and apply cross-map pressure. When your own TP is down, you are committed to your side — plan around it.<br><br><strong>Why CDs differ:</strong> Tower TP is shorter because landing there has less inherent map impact than a non-tower target. Cancellation is punished lightly at 3:20 — partial punishment for an inefficient action.</div>
+    <div class="spell-rule"><strong>2026 note:</strong> Top laners who completed their Role Quest have Unleashed TP at 7:00 CD free on top of their two summoners. This means top lane always has a TP available — but it has a longer cooldown window to plan around.</div>
+  </div>
+
+  <div class="spell-card">
+    <div class="spell-header">
+      <span class="spell-name">Ignite / Exhaust / Ghost</span>
+      <span class="spell-cd">3:30 CD</span>
+    </div>
+    <div class="spell-priority spell-minor">Track Priority: B-Tier — High Value in Lane Phase</div>
+    <div class="spell-body"><strong>Ignite:</strong> Determines who wins level 2-7 all-ins. If their support or laner burns it and misses, your kill pressure window is open for 3:30. Force the all-in immediately — do not wait.<br><br><strong>Exhaust:</strong> Their carry or assassin's anti-burst tool is gone. Your burst champion can one-shot freely for 3:30. Coordinate dives and all-ins around this window.<br><br><strong>Ghost:</strong> Their disengage or chase tool. Ghost down on a melee top = you can kite or chase freely. Ghost down on an ADC = they cannot run from your assassin.</div>
+    <div class="spell-rule"><strong>Rule:</strong> Ignite burns and misses in lane → immediately trade. You have 3:30 of the most aggressive window in the laning phase. Do not sit back passively.</div>
+  </div>
+
+  <div class="spell-card">
+    <div class="spell-header">
+      <span class="spell-name">Smite — Enemy Jungler</span>
+      <span class="spell-cd">~15s CD</span>
+    </div>
+    <div class="spell-priority spell-critical">Track Priority: S-Tier — Every Contested Objective</div>
+    <div class="spell-body">Enemy Smite is the most important piece of information in any Baron or Dragon contest. A jungler who just Smited a large camp has a ~15-second window where they cannot counter-Smite your objective. That is your steal-proof window.<br><br>You do not need to see Smite used directly. Watch the minimap: if their jungler just cleared Red Buff, Blue Buff, Gromp, Krugs, or any large camp, they fired Smite. You have 15 seconds.</div>
+    <div class="spell-rule"><strong>At Baron specifically:</strong> If you see their jungler clear a camp at 19:40, start Baron at 19:50. They cannot counter-Smite until ~19:55. You get the first uncontested Smite window every time you apply this read.</div>
+  </div>
+</div>
+
+<div class="formula">
+  <span class="formula-label">The Tracking Chat Template — Make This a Habit</span>
+  "[Spell] [role/name] [time used]" → comes back at [time + CD]
+
+  "Flash Garen 9:20" → back 14:20 → free dive window until then
+  "TP Fiora 11:00 (tower)" → back 15:00 → Dragon at 12:00 is a safe 4v5 window
+  "Smite Xin 18:45" → back ~18:58 → <span class="result">start Baron IMMEDIATELY if it has spawned</span>
+  "Ignite Thresh 6:30" → back 10:00 → all-in ADC freely for next 3:30
+
+  <span class="result">Typing this in chat costs you nothing and gives your entire team decision-making information they otherwise don't have.</span>
 </div>
 
 <div class="lbl">Interactive Calculators</div>
